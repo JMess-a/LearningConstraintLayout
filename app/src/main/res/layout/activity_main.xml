@@ -12,9 +12,10 @@
         android:id="@+id/button_main_buy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:background="#F31944"
-        app:backgroundTint="#F31944"
+        app:background="@color/mainColor"
+        app:backgroundTint="@color/mainColor"
         android:text="BUY FROM R129.99"
+        android:shape="rectangle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.9"
@@ -88,7 +89,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.35000002"
         app:srcCompat="@drawable/bookmark"
-        app:tint="#F31944" />
+        app:tint="@color/mainColor" />
 
     <ImageView
         android:id="@+id/imageView4"
@@ -107,9 +108,10 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:background="#F31944"
-        app:backgroundTint="#F31944"
+        app:background="@color/mainColor"
+        app:backgroundTint="@color/mainColor"
         android:text="RENT FROM R29.99"
+        android:shape="rectangle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.1"
