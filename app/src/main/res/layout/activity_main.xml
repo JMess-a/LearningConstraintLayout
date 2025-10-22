@@ -12,8 +12,8 @@
         android:id="@+id/button_main_buy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#F31944"
-        android:backgroundTint="#F31944"
+        app:background="#F31944"
+        app:backgroundTint="#F31944"
         android:text="BUY FROM R129.99"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -107,8 +107,8 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#F31944"
-        android:backgroundTint="#F31944"
+        app:background="#F31944"
+        app:backgroundTint="#F31944"
         android:text="RENT FROM R29.99"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -116,5 +116,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.556" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
