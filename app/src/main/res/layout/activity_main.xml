@@ -92,7 +92,7 @@
         app:tint="@color/mainColor" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/imageView_main_ratingShell"
         android:layout_width="66dp"
         android:layout_height="60dp"
         android:layout_marginTop="57dp"
@@ -119,9 +119,75 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.556" />
 
-    <androidx.constraintlayout.widget.Barrier
+    <TextView
+        android:id="@+id/textView_main_rating"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:barrierDirection="top" />
+        android:text="4.5"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.164"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.69" />
+
+    <ImageView
+        android:id="@+id/imageView_main_family_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="57dp"
+        android:scaleX="3"
+        android:scaleY="3"
+        android:src="@drawable/circle_fill"
+        app:tint="#F31944"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.36"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.65999997" />
+
+    <ImageView
+        android:id="@+id/imageView_main_people"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/person_2_fill"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView_main_family_rating"
+        app:layout_constraintEnd_toEndOf="@+id/imageView_main_family_rating"
+        app:layout_constraintStart_toStartOf="@+id/imageView_main_family_rating"
+        app:layout_constraintTop_toTopOf="@+id/imageView_main_family_rating"
+        app:layout_constraintVertical_bias="0.72"
+        app:tint="#FFFFFF" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="57dp"
+        android:background="#00FFEB3B"
+        android:scaleX="3"
+        android:scaleY="3"
+        android:src="@drawable/circle_fill"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.65999997"
+        app:tint="#FEFAD0" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleX=".5"
+        android:scaleY=".5"
+        android:src="@drawable/tomato"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+        app:layout_constraintEnd_toEndOf="@+id/imageView6"
+        app:layout_constraintStart_toStartOf="@+id/imageView6"
+        app:layout_constraintTop_toTopOf="@+id/imageView6" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
