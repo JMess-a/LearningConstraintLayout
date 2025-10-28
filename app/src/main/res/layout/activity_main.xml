@@ -18,12 +18,12 @@
         app:background="@color/mainColor"
         app:backgroundTint="@color/mainColor"
         app:cornerRadius="3dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/button_main_rent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/button_main_rent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.519" />
+        app:layout_constraintTop_toTopOf="@+id/button_main_rent"
+        app:layout_constraintVertical_bias="0.01999998" />
 
     <ImageView
         android:id="@+id/imageView_main_header"
@@ -58,12 +58,12 @@
         android:layout_height="wrap_content"
         android:text="Beauty and the\nBeast"
         android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView_main_poster"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.119"
         app:layout_constraintStart_toEndOf="@+id/imageView_main_poster"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.355" />
+        app:layout_constraintVertical_bias="0.96" />
 
     <TextView
         android:id="@+id/TextView_main_information"
@@ -72,11 +72,11 @@
         android:text="March 2017 PG 129 Minutes"
         android:textColor="#A9A1A1"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/button_main_buy"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.644"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_main_title"
         app:layout_constraintVertical_bias="0.454" />
 
     <ImageButton
@@ -84,10 +84,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#00FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_main_title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView_main_title"
         app:layout_constraintTop_toTopOf="@+id/textView_main_title"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/bookmark"
@@ -109,6 +109,66 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.519" />
 
+    <TextView
+        android:id="@+id/textView_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="________________________________________________________"
+        android:textColor="#DED1D1"
+        app:layout_constraintBottom_toTopOf="@+id/imageView_main_ratingShell"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_main_rent"
+        app:layout_constraintVertical_bias="0.588" />
+
+    <TextView
+        android:id="@+id/textView_barTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="________________________________________________________"
+        android:textColor="#DED1D1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_familyRating"
+        app:layout_constraintVertical_bias="0.06999999" />
+
+    <TextView
+        android:id="@+id/textView_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="The story and characters you know\n     and love come to spectacular\n  life in the live-action adaption of\n Disney's animated classic Beauty\n                   and the Beast."
+        android:textSize="22dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_barTwo" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/middleSection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="imageView_similarIcon,imageButton_similarButton,textView_similarText,textView_familyRating,textView_ratingsAmount,textView_main_rating,imageView_main_ratingShell,imageView_main_people,imageView_main_family_rating,textView_ratingPercent,imageView_main_tomato,imageView_main_tomatoBORDER" />
+
+    <ImageButton
+        android:id="@+id/imageButton_similarButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="57dp"
+        android:background="@null"
+        android:backgroundTint="#EA1B43"
+        android:scaleX="3"
+        android:scaleY="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.81"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.643"
+        app:srcCompat="@drawable/circle_fill"
+        app:tint="#EA1B43" />
+
     <ImageView
         android:id="@+id/imageView_main_tomatoBORDER"
         android:layout_width="wrap_content"
@@ -127,45 +187,93 @@
         app:tint="#FEFAD0" />
 
     <ImageView
-        android:id="@+id/imageView_main_tomato"
+        android:id="@+id/imageView_main_family_rating"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:scaleX=".5"
-        android:scaleY=".5"
-        android:src="@drawable/tomato"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView_main_tomatoBORDER"
-        app:layout_constraintEnd_toEndOf="@+id/imageView_main_tomatoBORDER"
-        app:layout_constraintStart_toStartOf="@+id/imageView_main_tomatoBORDER"
-        app:layout_constraintTop_toTopOf="@+id/imageView_main_tomatoBORDER" />
+        android:scaleX="3"
+        android:scaleY="3"
+        android:src="@drawable/circle_fill"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton_similarButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.41"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView_similarIcon"
+        app:layout_constraintVertical_bias="0.646"
+        app:tint="#F31944" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/textView_similarText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="71%"
+        android:text="Similar"
         android:textColor="#857E7E"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.62"
+        app:layout_constraintHorizontal_bias="0.828"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.73" />
 
-    <ImageView
-        android:id="@+id/imageView_main_family_rating"
+    <TextView
+        android:id="@+id/textView_familyRating"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="57dp"
-        android:scaleX="3"
-        android:scaleY="3"
-        android:src="@drawable/circle_fill"
+        android:text="Family"
+        android:textColor="#857E7E"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.41"
+        app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.646"
-        app:tint="#F31944" />
+        app:layout_constraintVertical_bias="0.73" />
+
+    <TextView
+        android:id="@+id/textView_ratingsAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="242 ratings"
+        android:textColor="#857E7E"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.731" />
+
+    <ImageView
+        android:id="@+id/imageView_main_ratingShell"
+        android:layout_width="66dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView_ratingPercent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView_main_tomato"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/googleplaypolygon" />
+
+    <TextView
+        android:id="@+id/textView_main_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4.5"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView_main_ratingShell"
+        app:layout_constraintEnd_toEndOf="@+id/imageView_main_ratingShell"
+        app:layout_constraintStart_toStartOf="@+id/imageView_main_ratingShell"
+        app:layout_constraintTop_toTopOf="@+id/imageView_main_ratingShell" />
+
+    <ImageView
+        android:id="@+id/imageView_similarIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton_similarButton"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton_similarButton"
+        app:layout_constraintStart_toStartOf="@+id/imageButton_similarButton"
+        app:layout_constraintTop_toTopOf="@+id/imageButton_similarButton"
+        app:srcCompat="@drawable/iphone_app_switcher" />
 
     <ImageView
         android:id="@+id/imageView_main_people"
@@ -181,131 +289,34 @@
         app:tint="#FFFFFF" />
 
     <TextView
-        android:id="@+id/textView_bar"
+        android:id="@+id/textView_ratingPercent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="________________________________________________________"
-        android:textColor="#DED1D1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.588" />
-
-    <TextView
-        android:id="@+id/textView_barTwo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="________________________________________________________"
-        android:textColor="#DED1D1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.768" />
-
-    <ImageView
-        android:id="@+id/imageView_main_ratingShell"
-        android:layout_width="66dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="57dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.15"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.65999997"
-        app:srcCompat="@drawable/googleplaypolygon" />
-
-    <TextView
-        android:id="@+id/textView_main_rating"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="4.5"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView_main_ratingShell"
-        app:layout_constraintEnd_toEndOf="@+id/imageView_main_ratingShell"
-        app:layout_constraintStart_toStartOf="@+id/imageView_main_ratingShell"
-        app:layout_constraintTop_toTopOf="@+id/imageView_main_ratingShell" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="242 ratings"
+        android:text="71%"
         android:textColor="#857E7E"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.15"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.731" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Family"
-        android:textColor="#857E7E"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintHorizontal_bias="0.62"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.73" />
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Similar"
-        android:textColor="#857E7E"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.828"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.73" />
-
-    <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="57dp"
-        android:background="@null"
-        android:backgroundTint="#EA1B43"
-        android:scaleX="3"
-        android:scaleY="3"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.81"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.643"
-        app:srcCompat="@drawable/circle_fill"
-        app:tint="#EA1B43" />
-
-    <TextView
-        android:id="@+id/textView_description"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="The story and characters you know\n     and love come to spectacular\n  life in the live-action adaption of\n Disney's animated classic Beauty\n                   and the Beast."
-        android:textSize="22dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_barTwo" />
-
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imageView_main_tomato"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:tint="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButton2"
-        app:layout_constraintEnd_toEndOf="@+id/imageButton2"
-        app:layout_constraintStart_toStartOf="@+id/imageButton2"
-        app:layout_constraintTop_toTopOf="@+id/imageButton2"
-        app:srcCompat="@drawable/iphone_app_switcher" />
+        android:scaleX=".5"
+        android:scaleY=".5"
+        android:src="@drawable/tomato"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView_main_tomatoBORDER"
+        app:layout_constraintEnd_toEndOf="@+id/imageView_main_tomatoBORDER"
+        app:layout_constraintStart_toStartOf="@+id/imageView_main_tomatoBORDER"
+        app:layout_constraintTop_toTopOf="@+id/imageView_main_tomatoBORDER" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/TopSection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="button_main_buy,imageView_main_header,imageView_main_poster,textView_main_title,TextView_main_information,imageButton_main_bookmark,button_main_rent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
